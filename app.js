@@ -1,21 +1,26 @@
 function calc() {
-    let num1 = Number(document.getElementById('num1').value);
-    let num2 = Number(document.getElementById('num2').value);
-    const operator = prompt('Enter operator ( either +, -, * or / ): ');
+    let number1 = document.getElementById("firstNumber").value;
+    let number2 = document.getElementById("secondNumber").value;
+    let operators = document.getElementById("operators").value;
+    let output = document.getElementById("output");
     let result;
 
-    if (operator == '+') {
-        result = num1 + num2;
-    } else if (operator == '-') {
-        result = num1 - num2;
-    } else if (operator == '/') {
-        result = num1 / num2;
-    } else if (operator == '*') {
-        result = num1 * num2;
-    } else {
-        console.log("Invalid operator");
-        return;
-    }
+    switch(operators){
+      case "+":
+        result=parseInt(number1)+parseFloat(number2);
+        break;
+      case "-":
+        result=parseInt(number1)-parseInt(number2);
+        break;
+      case "*":
+        result=parseInt(number1)*parseInt(number2);
+        break;
+      case "/":
+        result=parseInt(number1)/parseInt(number2);
+        break;
+      default :
+        result="Invalid Operator"
 
-    console.log(result);
+    }
+    output.innerHTML=result;
 }

@@ -9,8 +9,6 @@ function calc(){
     let op=document.getElementById("op");
     let lbloutput=document.getElementById("output");
 
-    console.log(num1+num2);
-
     switch(op){
         case "+":
             lbloutput.innerHTML=num1+num2;
@@ -28,5 +26,9 @@ function calc(){
 
     console.log(typeof num1);
     console.log(typeof num2); 
+
+    
+    
+
 
 }

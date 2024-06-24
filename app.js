@@ -1,34 +1,21 @@
-function calc(){
+function calc() {
+    let num1 = Number(document.getElementById('num1').value);
+    let num2 = Number(document.getElementById('num2').value);
+    const operator = prompt('Enter operator ( either +, -, * or / ): ');
+    let result;
 
-    let num1;
-    let num2;
-
-    num1= new Number(document.getElementById("num1"));
-    num2= new Number(document.getElementById("num2"));
-
-    let op=document.getElementById("op");
-    let lbloutput=document.getElementById("output");
-
-    switch(op){
-        case "+":
-            lbloutput.innerHTML=num1+num2;
-            break;
-        case "-":
-            lbloutput.innerHTML=num1-num2;
-            break;
-        case "/":
-            lbloutput.innerHTML=num1/num2;
-            break;
-        case "*":
-            lbloutput.innerHTML=num1*num2;
-            break;
+    if (operator == '+') {
+        result = num1 + num2;
+    } else if (operator == '-') {
+        result = num1 - num2;
+    } else if (operator == '/') {
+        result = num1 / num2;
+    } else if (operator == '*') {
+        result = num1 * num2;
+    } else {
+        console.log("Invalid operator");
+        return;
     }
 
-    console.log(typeof num1);
-    console.log(typeof num2); 
-
-    
-    
-
-
+    console.log(result);
 }
